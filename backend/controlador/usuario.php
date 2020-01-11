@@ -14,7 +14,7 @@
         case 'modificar': $obj_usu->modificar();
         break;
 
-        case 'eliminar':  $obj_usu->elimianar();
+        case 'eliminar':  $obj_usu->eliminar();
         break;
         
     }

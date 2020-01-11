@@ -1,43 +1,44 @@
-<?php
-    
-    class utilidad
-    {
+<?php 
 
-        private $nom_ser;
-        private $nom_usu;
-        private $con_usu;
-        private $nom_bda;
-        private $con_bda;
-        public  $que_bda;
-        
-        function __construct()
-        {
-           $this->nom_ser = "localhost";
-           $this->nom_usu = "root";
-           $this->con_usu = "";
-           $this->nom_bda = "GooContacs";
-           $this->conectar();
-        }
-        
-        function conectar()
-        {
-           $this->con_bda = new mysqli($this->nom_ser, $this->nom_usu, $this->con_usu, $this->nom_bda);
-        }
-        
-        function ejecutar()
-        {
-           echo $this->que_dba;
-           return $this->con_bda->query($this->que_bda);
-        }
+	class utilidad
+	{
 
-        function asignar_valor()
-        {
-           foreach ($_REQUEST as $atributo => $valor)
-           {
-              $this->atributo=$valor;
-           }
-        }
-        
-    }
-    
-?>
+		private $nom_ser;
+		private $usu_ser;
+		private $cla_ser;
+		private $nom_bda;
+		private $con_bda;
+		public  $que_bda;
+
+
+		function __construct()
+		{
+			$this->nom_ser = "localhost";
+			$this->usu_ser = "root";
+			$this->cla_ser = "";
+			$this->nom_bda = "GooContacs";
+			$this->conectar();
+		}
+
+		public function conectar()
+		{
+			$this->con_bda = new mysqli($this->nom_ser, $this->usu_ser, $this->cla_ser, $this->nom_bda);
+		}
+
+		public function ejecutar()
+		{
+			echo $this->que_bda;
+			return $this->con_bda->query($this->que_bda);
+		}
+
+		public function asignar_valor()
+		{
+			foreach ($_REQUEST as $atributo => $valor)
+			{
+				$this->$atributo = $valor;
+			}
+		}
+
+	}
+
+ ?>

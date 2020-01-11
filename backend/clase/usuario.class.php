@@ -16,10 +16,14 @@
     class usuario extends utilidad
     {
 
+        public $nom_usu;
+        public $cor_usu;
+        public $cla_usu;
+
         public function insertar()
         {
 
-            $this->que_dba = "insert into usuario
+            $this->que_bda = "insert into usuario
                                 (nom_usu,
                                 cor_usu,
                                 cla_usu)
@@ -35,7 +39,7 @@
         public function modificar()
         {
 
-            $this->que_dba = "update usuario
+            $this->que_bda = "update usuario
                                 nom_usu='$this->nom_usu',
                                 cla_usu='$this->cla_usu'
                             where
@@ -48,7 +52,7 @@
         public function eliminar()
         {
 
-            $this->que_dba = "delete from usuario
+            $this->que_bda = "delete from usuario
                             where
                                 cod_usu='$this->cod_usu';";
 
