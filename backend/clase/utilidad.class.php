@@ -9,6 +9,7 @@
 		private $nom_bda;
 		private $con_bda;
 		public  $que_bda;
+		public 	$puntero;
 
 
 		function __construct()
@@ -37,6 +38,11 @@
 			{
 				$this->$atributo = $valor;
 			}
+		}
+
+		public function extraer_dato()
+		{
+			return $this->puntero->fetch_assoc();
 		}
 
 	}

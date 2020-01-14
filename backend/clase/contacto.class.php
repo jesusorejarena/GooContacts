@@ -2,7 +2,7 @@
     
     /*
 
-        cod_con, nom_con, ape_con, emp_con, usu_con, tel_con, fky_usuario
+        cod_con, nom_con, ape_con, emp_con, cor_con, usu_con, tel_con, fky_usuario
 
         cod_con         INT(11)                 AUTO_INCREMENT      PRIMARY_KEY     -> Codigo del contacto
         nom_con         VARCHAR(30)     NULL                                        -> Nombre del contacto
@@ -24,6 +24,7 @@
         public $nom_con;
         public $ape_con;
         public $emp_con;
+        public $cor_con;
         public $usu_con;
         public $tel_con;
         public $fky_usuario;
@@ -33,18 +34,18 @@
         {
 
             $this->que_bda = "insert into contacto
-                                (cod_con, 
-                                nom_con, 
+                                (nom_con, 
                                 ape_con, 
-                                emp_con, 
+                                emp_con,
+                                cor_con, 
                                 usu_con, 
                                 tel_con,
                                 fky_usuario)
                             values
-                                ('$this->cod_con', 
-                                '$this->nom_con', 
+                                ('$this->nom_con', 
                                 '$this->ape_con', 
                                 '$this->emp_con', 
+                                '$this->cor_con', 
                                 '$this->usu_con', 
                                 '$this->tel_con',
                                 '$this->fky_usuario');";
@@ -61,10 +62,11 @@
                                     nom_con='$this->nom_con',
                                     ape_con='$this->ape_con',
                                     emp_con='$this->emp_con',
+                                    cor_con='$this->cor_con',
                                     usu_con='$this->usu_con',
                                     tel_con='$this->tel_con'
                                 where
-                                    cod_con='$this->cod_usu';";
+                                    cod_con='$this->cod_con';";
 
             return $this->ejecutar();
 
