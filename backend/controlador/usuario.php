@@ -9,6 +9,7 @@
     switch ($_REQUEST["ejecutar"])
     {
         case 'insertar':    $obj_usu->insertar();
+                            header("Location: ../../frontend/vista/iniciarsesion.php");
         break;
 
         case 'modificar':   $obj_usu->modificar();

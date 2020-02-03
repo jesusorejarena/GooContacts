@@ -10,7 +10,7 @@
         emp_con         VARCHAR(50)     NULL                                        -> Empresa del contacto
         cor_con         VARCHAR(80)     NULL                                        -> Correo del contacto
         usu_con         VARCHAR(30)     NULL                                        -> Usuario del contacto
-        tel_con         VARCHAR(14)     NULL                                        -> Telefono del contacto
+        tel_con         VARCHAR(14)     NULL                                        -> Teléfono del contacto
         fky_usuario     INT(11)                                                     -> fky del usuario
 
     */

@@ -8,14 +8,17 @@
 
     switch ($_REQUEST["ejecutar"])
     {
-    	case 'insertar':	$obj_con->insertar();
-    	break;
+        case 'insertar':	$obj_con->insertar();
+                            header("Location: ../../frontend/vista/inicio.php");
+        break;
 
-    	case 'modificar':	$obj_con->modificar();
-    	break;
+        case 'modificar':	$obj_con->modificar();
+                            header("Location: ../../frontend/vista/inicio.php");
+        break;
 
-    	case 'eliminar':	$obj_con->eliminar();
-    	break;
+        case 'eliminar':	$obj_con->eliminar();
+                            header("Location: ../../frontend/vista/inicio.php");
+        break;
         
     }
     

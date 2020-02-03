@@ -49,6 +49,19 @@
 
         }// fin de modificar
 
+        function listar_session($cor_usu, $cla_usu)
+        {
+            $this->que_bda = "select cod_usu, cor_usu, cla_usu 
+                                    from 
+                                        usuario 
+                                    where 
+                                        cor_usu='$cor_usu' and 
+                                        cla_usu='$cla_usu';";
+
+            return $this->ejecutar();
+
+        }// fin de listar session
+
         public function eliminar()
         {
 
